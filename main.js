@@ -1,3 +1,5 @@
+const source = $("#people-template").html();
+const template = Handlebars.compile(source);
 let people;
 
 const getPeople = function () {
@@ -14,8 +16,6 @@ const getPeople = function () {
   });
 };
 getPeople();
-const source = $("#people-template").html();
-const template = Handlebars.compile(source);
 
 const renderPeople = function () {
   const someHTML = template(people);
